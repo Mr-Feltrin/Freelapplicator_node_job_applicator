@@ -1,0 +1,36 @@
+<div id="top-container" class="container-fluid align-items-center">
+    <h1 id="main-title" class="text-center">Find the best job of your career</h1>
+    <p class="text-center" id="main-subtitle">We have the most technology job vacancies in the market, suitable for home office</p>
+    <form id="search-form" action="/" method="get">
+        <div class="row">
+            <div class="col-12 col-md-8 col-lg-7 col-xxl-6 mx-auto">
+                <div class="input-group mx-auto">
+                    <input type="text" class="form-control" id="job" name="job" placeholder="Search for a job vacancy">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<main>
+    <div id="jobs-container" class="container">
+        {{#if search}}
+        <h2 id="job-list-title">Searching for vacancies that contains: {{search}}</h2>
+        {{else}}
+        <h2 id="job-list-title">Check our most relevant vacancies</h2>
+        {{/if}}
+        <ul id="job-list" class="list-group">
+            {{#each jobs}}
+            <li class="list-group-item {{#if dataValues.new_job}}new-job{{/if}}">
+                <img class="img-fluid" src="/images/company.png" alt="Company">
+                <p>{{dataValues.company}}</p>
+                <h2>{{dataValues.title}}</h2>
+                <p>${{dataValues.salary}}</p>
+                <span class="new-job-label">New</span>
+                <a href="/jobs/view/{{dataValues.id}}" class="btn btn-primary">Check Vacancy</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</main>

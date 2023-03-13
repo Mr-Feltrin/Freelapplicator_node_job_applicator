@@ -1,0 +1,37 @@
+<div id="add-form-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Publish the vacancy filling the form</h1>
+            </div>
+            <div id="form-box" class="col-md-12">
+                <h2>Fill the form with details to find the suitable developer</h2>
+                <form action="/jobs/add" method="post
+                ">
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Job Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Insert the vacancy title" aria-describedby="titleHelp" required>
+                        <div class="form-text text-muted" id="titleHelp">Make sure your title is clear and objective</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Job Description:</label>
+                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Describe the activities to be performed by developer" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="company">Company Name:</label>
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Insert the Company Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Contact Email:</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Insert the Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="salary">Job Salary:</label>
+                        <input type="text" class="form-control" id="salary" name="salary" placeholder="Insert the vacancy salary" required>
+                    </div>
+                    <input type="hidden" name="new_job" value="1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{{body}}}

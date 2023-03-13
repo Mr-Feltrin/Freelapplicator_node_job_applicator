@@ -1,0 +1,16 @@
+<div class="container" id="job-view-container">
+    <div class="row text-center">
+        <div class="col-md-12" id="img-container">
+            <img src="/images/company.png" alt="Company">
+        </div>
+        <div class="col-md-12">
+            <h1 class="main-color">{{job.dataValues.title}}</h1>
+            <p class="bold">Who are they searching for:</p>
+            <p class="job-desc">{{job.dataValues.description}}</p>
+            <p><span class="bold">The informed salary is: </span>${{job.dataValues.salary}}</p>
+            <p>To work at <span class="bold main-color">{{job.dataValues.company}}</span> send an email to <a href="mailto:{{job.dataValues.email}}">{{job.dataValues.email}}</a></p>
+            <a class="btn btn-primary back-link main-color" href="/">Return</a>
+        </div>
+    </div>
+</div>
+{{body}}
